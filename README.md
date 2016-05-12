@@ -1,5 +1,9 @@
 #2048 in Idris
 
+Guannan Wei
+
+---
+
 This project aims to learn dependent type programming in Idris. 
 
 I implemented two version of game 2048:
