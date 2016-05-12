@@ -6,7 +6,7 @@ I implemented two version of game 2048:
 
 * `2048.idr` shows how to just using traditional type system to achieve in Idris.
 
-* `2048-dependent.idr` is the version using dependent type. The most important data structure is dependent list `Vect`, and it also utilize built-in proof to insure some pre-condition and post-condition of function behaviors.
+* `2048-dependent.idr` is the version using dependent type. The most important data structure is dependent list `Vect`, and it also utilize built-in proof to ensure pre-conditions and post-conditions of function behavior.
 
 ### Build
 
