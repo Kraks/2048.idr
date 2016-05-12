@@ -13,11 +13,11 @@ I implemented two version of game 2048:
 ### Build
 
 You should have installed Idris (version 0.11 or later), see [Idris Documentation](http://www.idris-lang.org/download/).
-* run `make all` to compile both two versions.
+* run `make all` to compile both two versions,
 
-* run `make 2048` to compile ordinary version
+* run `make 2048` to compile ordinary version,
 
-* `make 2048-dep` to compile the dependent type version.
+* run `make 2048-dep` to compile the dependent type version.
 
 ### How to play
 
