@@ -12,12 +12,6 @@ import Effect.System
 data Direction = Up | Down | Left | Right
 data Action = Exit | Merge Direction | Invalid
 
-range : Int -> Int -> List Int
-range x y = if x < y then x::(range (x+1) y) else []
-
-rangeFromZero : Int -> List Int
-rangeFromZero = range 0
-
 orvmap : (a -> Bool) -> Vect n a -> Bool
 orvmap f [] = False
 orvmap f (x::xs) = (f x) || (orvmap f xs)
@@ -25,10 +19,6 @@ orvmap f (x::xs) = (f x) || (orvmap f xs)
 andvmap : (a -> Bool) -> Vect n a -> Bool
 andvmap f [] = True
 andvmap f (x::xs) = (f x) && (andvmap f xs)
-
---buildVect : {n : Nat} -> Nat -> (Nat -> a) -> Vect n a
---buildVect Z f = {n=0} Nil
---buildVect (S k) f = (f (S k))::(buildVect k f)
 
 flatten : {n : Nat} -> {m: Nat} -> Vect n (Vect m a) -> Vect (n*m) a
 flatten [] = []
@@ -38,9 +28,6 @@ partition : {n: Nat} -> {m: Nat} -> Vect (n*m) a -> Vect n (Vect m a)
 partition {n=Z} {m=q} xs = []
 partition {n=(S k)} {m=(S l)} xs = let rest = (Main.partition {n=k} {m=(S l)} (Vect.drop (S l) xs)) 
                                    in (Vect.take (S l) xs)::rest
-
---(.) : (b -> c) -> (a -> b) -> a -> c
---(.) f g = \x => f (g x)
 
 -------------------
 
@@ -166,12 +153,3 @@ startGame = do srand !time
 main : IO ()
 main = run startGame
 
-{-
--- test
-g : Grid
-g = [[2, 2, 4, 4],
-     [0, 0, 2, 2],
-     [0, 2, 2, 2],
-     [4, 4, 4, 4]]
-
--}
