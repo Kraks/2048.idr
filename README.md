@@ -4,7 +4,7 @@ Author: Guannan Wei
 
 This project aims to learn & show dependent type programming in Idris. 
 
-I implemented two version of game 2048:
+I implemented two versions of game 2048:
 
 * `2048.idr` shows how to achieve it in Idris just using traditional type system.
 
